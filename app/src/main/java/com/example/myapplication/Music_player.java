@@ -25,38 +25,7 @@ public class Music_player extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MediaPlayer mp = new MediaPlayer();
-        mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-        Uri audio = Uri.parse();
-        try {
-            mp.setDataSource(this ,audio);
-            mp.prepare();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        play = getView().findViewById(R.id.play);
-        stop = getView().findViewById(R.id.stop);
-        pause = getView().findViewById(R.id.pause);
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mp.start();
-            }
-        });
-        stop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mp.pause();
-                mp.seekTo(0);
-            }
-        });
-        pause.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mp.pause();
-            }
-        });
     }
 
     @Override
