@@ -6,11 +6,7 @@
     android:background="#AA4B4B"
     android:padding="12dp"
     >
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/image"
-        android:layout_gravity="center_vertical"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

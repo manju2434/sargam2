@@ -16,7 +16,7 @@
     />
     <item
         android:title="About us"
-        android:icon="@drawable/ic_baseline_contact_mail_24"
+        android:icon="@drawable/ic_baseline_contact_support_24"
         android:id="@+id/about"
         />
 

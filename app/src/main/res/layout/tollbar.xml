@@ -12,7 +12,7 @@
        android:layout_height="wrap_content"
        android:id="@+id/toolbar"
        />
-        <include layout="@layout/content_main"/>
+        <include layout="@layout/activity_home_page"/>
     </com.google.android.material.appbar.AppBarLayout>
 
 </LinearLayout>
