@@ -29,7 +29,6 @@ public class Register extends AppCompatActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +40,7 @@ public class Register extends AppCompatActivity {
         enter_passwd =findViewById(R.id.enter_pass_register);
         confirm_pass = findViewById(R.id.enter_Cpassword_Register);
         enter_email = findViewById(R.id.enter_email_Reg);
-        mAuth = FirebaseAuth.getInstance();
-        mUser = mAuth.getCurrentUser();
+
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,7 +64,10 @@ public class Register extends AppCompatActivity {
     }
 
     private void perAuth() {
-            String email = enter_email.getText().toString();
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
+        String email = enter_email.getText().toString();
             String cPass = confirm_pass.getText().toString();
             String password = enter_passwd.getText().toString();
                    if(!email.matches(email_pattern)){
@@ -79,20 +80,16 @@ public class Register extends AppCompatActivity {
                        confirm_pass.setError("password does not match");
                    }
                    else{
-                       progressDialog.setMessage("Please wait while we register");
-                       progressDialog.setTitle("Registration");
-                       progressDialog.setCanceledOnTouchOutside(false);
-                       progressDialog.show();
                        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(
                                new OnCompleteListener<AuthResult>() {
                                    @Override
                                    public void onComplete(@NonNull Task<AuthResult> task) {
                                        if(task.isSuccessful()){
-                                           Toast.makeText(Register.this, "Registration is succesfull", Toast.LENGTH_SHORT).show();
                                            sendUserToNextActivity();
-                                           progressDialog.dismiss();
+                                           Toast.makeText(Register.this, "Registration is succesfull", Toast.LENGTH_SHORT).show();
+
+
                                        }else{
-                                           progressDialog.dismiss();
                                            Toast.makeText(Register.this, "Error", Toast.LENGTH_SHORT).show();
                                        }
                                    }
@@ -104,7 +101,7 @@ public class Register extends AppCompatActivity {
 
     private void sendUserToNextActivity() {
         Intent intent = new Intent(Register.this,Home_page.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+     //   intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 }
