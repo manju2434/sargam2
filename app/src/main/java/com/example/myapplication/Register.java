@@ -33,6 +33,7 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        getSupportActionBar().hide();
 
         back_button =findViewById(R.id.back_Register);
         back_login = findViewById(R.id.back_login);
@@ -101,7 +102,7 @@ public class Register extends AppCompatActivity {
 
     private void sendUserToNextActivity() {
         Intent intent = new Intent(Register.this,Home_page.class);
-     //   intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+       intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 }
