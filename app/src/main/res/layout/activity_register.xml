@@ -13,6 +13,7 @@
         android:background="@drawable/gradient"
         android:orientation="vertical">
         <Button
+            android:id="@+id/back_Register"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/ic_baseline_arrow_back_24"/>
@@ -21,18 +22,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Register"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:textStyle="bold"
             android:layout_marginHorizontal="100dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             android:textColor="@color/teal_200"/>
 
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            />
 
 
         <androidx.cardview.widget.CardView
@@ -46,25 +41,7 @@
             >
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Enter your name"
-                android:textColorHint="@color/teal_200"
-                android:textStyle=""
-                android:ems="10"/>
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:backgroundTint="#754E729E"
-            android:elevation="11dp"
-            app:cardCornerRadius="10dp"
-            >
-
-            <EditText
+                android:id="@+id/enter_email_Reg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Enter your email"
@@ -79,6 +56,30 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#754E729E"
+            android:elevation="11dp"
+            app:cardCornerRadius="10dp"
+            >
+
+            <EditText
+                android:id="@+id/enter_pass_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter your password"
+                android:textColorHint="@color/teal_200"
+                android:textStyle=""
+                android:ems="10"
+                android:inputType="textPassword"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:backgroundTint="#2C5178"
             android:elevation="11dp"
@@ -88,7 +89,7 @@
 
 
             <EditText
-
+                android:id="@+id/enter_Cpassword_Register"
                 android:layout_width="302dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -101,6 +102,7 @@
 
 
         <Button
+            android:id="@+id/Register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Register"
@@ -109,6 +111,7 @@
             android:layout_marginTop="40dp"
             android:textColor="@color/teal_200"/>
         <TextView
+            android:id="@+id/back_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="already a user/log in"

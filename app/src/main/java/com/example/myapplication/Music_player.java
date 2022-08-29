@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import java.io.IOException;
 
 
-public class Music_player extends Fragment {
+public class  Music_player extends Fragment {
 
 
 
