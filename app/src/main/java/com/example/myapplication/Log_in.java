@@ -93,12 +93,6 @@ public class Log_in extends AppCompatActivity {
             });
 
         }
-
-
-
-
-
-
     }
     private void sendUserToNextActivity(){
         Intent intent = new Intent(Log_in.this,Home_page.class);

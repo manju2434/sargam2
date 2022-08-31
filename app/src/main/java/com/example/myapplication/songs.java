@@ -1,7 +1,19 @@
 package com.example.myapplication;
 
 public class songs {
-    String image,songName,url;
+    String image;
+    String SongName;
+    String url;
+    String ArtistName;
+    public String getArtistName() {
+        return ArtistName;
+    }
+
+    public void setArtistName(String artistName) {
+        this.ArtistName = ArtistName;
+    }
+
+
      public songs(){};
 
     public void setImage(String image) {
@@ -9,7 +21,7 @@ public class songs {
     }
 
     public void setSongName(String songName) {
-        this.songName = songName;
+        this.SongName = SongName;
     }
 
     public void setUrl(String url) {
@@ -21,7 +33,7 @@ public class songs {
     }
 
     public String getSongName() {
-        return songName;
+        return SongName;
     }
 
     public String getUrl() {
